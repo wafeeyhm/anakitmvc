@@ -1,11 +1,7 @@
 <?php
 
-require "model.php";
+require "controller.php";
 
-$model = new Model;
+$controller = new Controller;
 
-$hero = $model->getHeroContent();
-
-require "view.php";
-
-?>
+$controller->index();
