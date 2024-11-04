@@ -13,4 +13,10 @@ class Contents{
         require "views/contents_index.php";
     }
 
+    public function show(){
+
+        require "views/contents_show.php";
+
+    }
+
 }
