@@ -1,3 +1,12 @@
+<?php
+
+require "Model.php";
+
+$model = new Model;
+
+$hero = $model->getHeroContent();
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,14 +62,14 @@
       </div>
     </div>
   </nav>
-  <div class="py-5 text-center" style="background-image: url('assets/cosmo.jpg');background-position:center center;background-repeat:no-repeat;">
+  <div class="py-5 text-center" style="background-image: url('<?php echo $hero['background_image']; ?>');background-position:center center;background-repeat:no-repeat;">
     <div class="container py-5">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="display-3 mb-4 text-center text-white bg-dark-opaque"><br><img class="img-fluid d-block mx-auto" src="assets/logo.png" width="40%">
-          <p> </p>ANAK IT BN<br><br></h1>
-          <p class="lead mb-5">WELCOME TO ANAK IT BN</p>
-          <a href="https://www.meetup.com/Anak-IT-Brunei/" class="btn btn-lg btn-primary mx-1" target="_blank">Go to our Meetup Page</a>
+          <h1 class="display-3 mb-4 text-center text-white bg-dark-opaque"><br><img class="img-fluid d-block mx-auto" src="<?php echo $hero['logo_image']; ?>" width="40%">
+          <p> </p><?php echo $hero['title'] ?><br><br></h1>
+          <p class="lead mb-5"><?php echo $hero['subtitle'] ?></p>
+          <a href="<?php echo $hero['button_link'] ?>" class="btn btn-lg btn-primary mx-1" target="_blank"><?php echo $hero['button_text'] ?></a>
         </div>
       </div>
     </div>
