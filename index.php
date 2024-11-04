@@ -1,7 +1,7 @@
 <?php
 
-require "controller.php";
+require "src/controllers/contents.php";
 
-$controller = new Controller;
+$controller = new Contents;
 
 $controller->index();

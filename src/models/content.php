@@ -1,6 +1,6 @@
 <?php
 
-class Model{
+class Content{
 
     public function getData(): array
     {
