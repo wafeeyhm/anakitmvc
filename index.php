@@ -1,7 +1,11 @@
 <?php
 
 $path = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
-exit($path);
+
+$segments = explode("/", $path);
+
+print_r($segments);
+exit;
 
 $action = $_GET['action'];
 $controller = $_GET['controller'];
