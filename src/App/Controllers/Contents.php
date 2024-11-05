@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Controllers;
+
 class Contents{
 
     public function index(){

@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Models;
+
 class Content{
 
     public function getData(): array

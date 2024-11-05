@@ -24,7 +24,7 @@ if ($params === false) {
 $action = $params["action"];
 $controller = $params["controller"];
 
-require "src/controllers/$controller.php";
+
 
 $controller_object = new $controller;
 
