@@ -5,10 +5,8 @@ namespace App\Controllers;
 class Contents{
 
     public function index(){
-        
-        require "src/models/content.php";
 
-        $content = new Content;
+        $content = new \App\Models\Content;
 
         $hero = $content->getHeroContent();
 
