@@ -2,11 +2,13 @@
 
 namespace App\Controllers;
 
+use App\Models\Content;
+
 class Home{
 
     public function index(){
 
-        $content = new \App\Models\Content;
+        $content = new Content;
 
         $hero = $content->getHeroContent();
 

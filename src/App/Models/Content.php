@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use PDO;
+
 class Content{
 
     public function getData(): array
