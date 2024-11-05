@@ -12,4 +12,17 @@ class Router{
         ];
     }
 
+    public function match(string $path): array|bool
+    {
+        foreach ($this->routes as $route) {
+            # code...
+            if ($route["path"] === $path) {
+                # code...
+                return $route["params"];
+            }
+        }
+
+        return false;
+    }
+
 }
