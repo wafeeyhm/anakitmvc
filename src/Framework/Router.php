@@ -21,12 +21,13 @@ class Router{
 
         if (preg_match($pattern, $path, $matches)){
 
-            print_r($matches);
+            $matches = array_filter($matches, "is_string", ARRAY_FILTER_USE_KEY);
 
-            exit("Match");
+            return $matches;
 
         }
 
+        /*
         foreach ($this->routes as $route) {
             # code...
             if ($route["path"] === $path) {
@@ -34,6 +35,7 @@ class Router{
                 return $route["params"];
             }
         }
+        */
 
         return false;
     }
