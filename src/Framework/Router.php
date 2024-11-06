@@ -16,6 +16,15 @@ class Router{
 
     public function match(string $path): array|bool
     {
+
+        $pattern = "#^/home/index$#";
+
+        if (preg_match($pattern, $path)){
+
+            exit("Match");
+
+        }
+
         foreach ($this->routes as $route) {
             # code...
             if ($route["path"] === $path) {
