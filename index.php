@@ -17,17 +17,8 @@ $router->add("/contents", ["controller" => "contents", "action" => "index"]);
 $router->add("/", ["controller" => "home", "action" => "index"]);
 $router->add("/{controller}/{action}");
 
-$params = $router->match($path);
 
-if ($params === false) {
 
-  exit("No route matched");
+$dispatcher = new Framework\Dispatcher($router);
 
-}
-
-$action = $params["action"];
-$controller = "App\Controllers\\" . ucwords($params["controller"]);
-
-$controller_object = new $controller;
-
-$controller_object->$action();
+$dispatcher->handle($path);
