@@ -15,7 +15,7 @@ class Contents{
 
         $viewer = new Viewer;
 
-        $viewer->render("contents_index.php", [
+        echo $viewer->render("contents_index.php", [
             "hero" => $hero
         ]);
 
