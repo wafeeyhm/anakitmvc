@@ -10,7 +10,8 @@ spl_autoload_register(function (string $class_name) {
 
 $router = new Framework\Router;
 
-$router->add("/{controller}/{action}");
+// $router->add("/{controller}/{action}");
+$router->add("/contents/{slug:[\w-]+}", ["controller" => "contents", "action" => "show"]);
 $router->add("/{controller}/{id:\d+}/{action}");
 $router->add("/home/index", ["controller" => "home", "action" => "index"]);
 $router->add("/contents", ["controller" => "contents", "action" => "index"]);
