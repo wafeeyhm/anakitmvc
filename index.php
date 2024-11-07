@@ -17,8 +17,6 @@ $router->add("/contents", ["controller" => "contents", "action" => "index"]);
 $router->add("/", ["controller" => "home", "action" => "index"]);
 $router->add("/{controller}/{action}");
 
-
-
 $dispatcher = new Framework\Dispatcher($router);
 
 $dispatcher->handle($path);
