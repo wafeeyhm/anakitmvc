@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Content;
+use Framework\Viewer;
 
 class Contents{
 
@@ -12,7 +13,10 @@ class Contents{
 
         $hero = $content->getHeroContent();
 
-        require "views/contents_index.php";
+        $viewer = new Viewer;
+
+        $viewer->render("contents_index.php", $hero);
+
     }
 
     public function show(){
